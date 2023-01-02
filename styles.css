@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3F51B5;
+}
+
+.container{
+    background-color: white;
+    margin: auto;
+    margin-top: 150px;;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px;
+    /* box-shadow:0 0 15px 4px rgb(141, 140, 140); */
+    box-shadow:0 0 15px 4px rgb(125, 125, 125);
+}
+
+.container > #form > span {
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size:30px;
+    margin-bottom: 30px;
+}
+
+.text-box,
+.title-box {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border: 0;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+}
+
+.text-box {
+    margin-bottom: 20px;
+}
+
+label {
+    position: relative; /* to contain absolute elements */
+    padding-left:30px; /* free space for custom checkbox */
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+label input[type=checkbox] {
+    position: absolute; 
+    width:0; 
+    height:0;
+}
+
+label span {
+    position: absolute;
+    /* position to the free space in <label> */
+    top:0;
+    left:0;
+    width:20px; 
+    height:20px;
+    background-color: #ddd;
+}
+
+label span:after {
+    content: "";
+    position: absolute;
+    display: none;
+    
+    /* check icon */
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+label input:checked ~ span {
+    background-color: #2eaadc;
+}
+label input:checked ~ span:after {
+    display:block;
+}
+
+
+
+.button-field {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 20px;
+    background-color: #3F51B5;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    border:0;
+    cursor: pointer;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #c9c5c5;
+  color: #666666;
+  cursor: not-allowed;
+}
